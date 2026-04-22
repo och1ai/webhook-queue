@@ -1,0 +1,11 @@
+name = "webhook-queue"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[[durable_objects.bindings]]
+name = "QUEUE"
+class_name = "WebhookQueue"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["WebhookQueue"]
